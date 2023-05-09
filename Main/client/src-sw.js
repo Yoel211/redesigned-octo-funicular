@@ -27,7 +27,7 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // The precacheAndRoute() method takes an array of URLs to precache. The self._WB_MANIFEST is an array that contains the list of URLs to precache.
-precacheAndRoute(self.__WB_MANIFEST);
+
 
 // TODO: Implement asset caching. Use the following strategies: CacheFirst, StaleWhileRevalidate, NetworkFirst, NetworkOnly.  
 
