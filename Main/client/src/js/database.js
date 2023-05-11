@@ -14,7 +14,8 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 // export const putDb = async (content) => console.error('putDb not implemented');
-export const putDb = async () => {
+export const putDb = async (content) => {
+  console.log(content)
   console.log('PUT to the database');
 
   // Update a connection to the database database and version we want to use.
@@ -27,7 +28,7 @@ export const putDb = async () => {
   const store = tx.objectStore('jate');
 
   // Use the .put() method to add data to the database.
-  const request = store.put({ id: id, jateDb: content });
+  const request = store.put({id: 1,value: content});
 
   // Get confirmation of the request.
   const result = await request;
@@ -56,6 +57,6 @@ export const getDb = async () => {
   // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
-  return result;
+  return result[0].value;
 };
 initdb();

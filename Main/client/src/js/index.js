@@ -4,6 +4,12 @@ import './database';
 import '../css/style.css';
 import { putDb, getDb } from './database';  
 
+// const putDb = new putDb ();
+// const getDb = new getDb ();
+
+
+
+
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
